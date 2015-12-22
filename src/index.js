@@ -38,7 +38,7 @@
         }
 
         /**
-         * return a DOM node using querySelectorAll
+         * return an array of DOM nodes using querySelectorAll
          * @param {string} _selector
          * @returns {NodeList}
          */
@@ -47,7 +47,7 @@
         }
 
         /**
-         * return a DOM node using querySelectorAll
+         * return a DOM node using getElementById
          * @param {string} _id
          * @returns {Element}
          */
