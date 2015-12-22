@@ -14,7 +14,9 @@ ChePollo is:
 - packed in a CommonJS module or available in global scope (window.oo)
 - compatible with IE > 7 (it has polyfill included)
 
+
 ---
+
 
 ## Install
 
@@ -23,9 +25,24 @@ $ npm install chepollo
 ```
 
 
+## Usage
+
+```js
+oo.ready(function(){
+    var foo = oo.getId('#foo');
+    oo.addClass(foo, 'pollastro');
+    oo.addData(foo, 'somekey', 'somedata');
+    oo.getData(foo, 'somekey'); // "somedata"
+    oo.debounce(function(){
+        foo.removeClass(foo, 'pollastro');
+    }, 1000);
+});
+```
+
+
 ## API reference
 
-{{#module name="oo"~}}
+{{#module name="chepollo"~}}
 {{>body~}}
 {{>members~}}
 {{/module}}

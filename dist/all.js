@@ -7,8 +7,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
 
 /**
- * ChePollo (oo)
- * @module oo
+ * @module chepollo
  */
 
 (function (window, factory) {
@@ -26,11 +25,11 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
 
     'use strict';
 
-    /** Class ChePollo. */
+    /** Class oo. */
 
-    var ChePollo = (function () {
-        function ChePollo() {
-            _classCallCheck(this, ChePollo);
+    var oo = (function () {
+        function oo() {
+            _classCallCheck(this, oo);
 
             return this;
         }
@@ -44,7 +43,7 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
          * @param {function} _callback
          */
 
-        _createClass(ChePollo, [{
+        _createClass(oo, [{
             key: 'ready',
             value: function ready(_callback) {
                 document.addEventListener('DOMContentLoaded', _callback);
@@ -210,10 +209,10 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
             }
         }]);
 
-        return ChePollo;
+        return oo;
     })();
 
-    return new ChePollo();
+    return new oo();
 });
 'use strict';
 

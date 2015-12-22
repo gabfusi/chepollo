@@ -1,6 +1,5 @@
 /**
- * ChePollo (oo)
- * @module oo
+ * @module chepollo
  */
 
 
@@ -19,8 +18,8 @@
 
     'use strict';
 
-    /** Class ChePollo. */
-    class ChePollo {
+    /** Class oo. */
+    class oo {
 
         constructor() {
             return this;
@@ -162,6 +161,6 @@
 
     }
 
-    return new ChePollo();
+    return new oo();
 
 }));
