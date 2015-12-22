@@ -74,7 +74,7 @@ on DOM ready
 
 <a name="module_chepollo..oo+getAll"></a>
 #### oo.getAll(_selector) ⇒ <code>NodeList</code>
-return a DOM node using querySelectorAll
+return an array of DOM nodes using querySelectorAll
 
 **Kind**: instance method of <code>[oo](#module_chepollo..oo)</code>  
 
@@ -84,7 +84,7 @@ return a DOM node using querySelectorAll
 
 <a name="module_chepollo..oo+getById"></a>
 #### oo.getById(_id) ⇒ <code>Element</code>
-return a DOM node using querySelectorAll
+return a DOM node using getElementById
 
 **Kind**: instance method of <code>[oo](#module_chepollo..oo)</code>  
 
