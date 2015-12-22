@@ -29,7 +29,7 @@ $ npm install chepollo
 
 ```js
 oo.ready(function(){
-    var foo = oo.getById('#foo');
+    var foo = oo.getById('foo');
     oo.addClass(foo, 'pollastro');
     oo.addData(foo, 'somekey', 'somedata');
     oo.getData(foo, 'somekey'); // "somedata"
