@@ -5,13 +5,17 @@
 
 ( function( window, factory ) {
     'use strict';
+
     // universal module definition
     if ( typeof exports === 'object' ) {
         // CommonJS
         module.exports = factory();
     } else {
         // browser global
-        window.oo = factory();
+        if(window)
+            window.oo = factory();
+        else if(!!global)
+            global.oo = factory();
     }
 
 }( window, function factory() {

@@ -35,7 +35,7 @@ oo.ready(function(){
     oo.getData(foo, 'somekey'); // "somedata"
     oo.debounce(function(){
         foo.removeClass(foo, 'pollastro');
-    }, 1000);
+    }, 1000)();
 });
 ```
 

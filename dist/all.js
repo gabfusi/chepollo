@@ -12,6 +12,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 (function (window, factory) {
     'use strict';
+
     // universal module definition
 
     if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object') {
@@ -19,7 +20,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         module.exports = factory();
     } else {
         // browser global
-        window.oo = factory();
+        if (window) window.oo = factory();else if (!!global) global.oo = factory();
     }
 })(window, function factory() {
 
