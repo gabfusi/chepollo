@@ -38,12 +38,21 @@
         }
 
         /**
-         * return an array of DOM nodes using querySelectorAll
+         * return an array of DOM nodes using querySelectorAll()
          * @param {string} _selector
          * @returns {NodeList}
          */
         getAll(_selector) {
             return document.querySelectorAll(_selector);
+        }
+
+        /**
+         * return a dom Element using querySelector()
+         * @param _selector
+         * @returns {Element}
+         */
+        getOne(_selector) {
+            return document.querySelector(_selector);
         }
 
         /**
@@ -132,6 +141,38 @@
          */
         getData(_el, _key){
             return typeof _el.dataset[_key] !== 'undefined' ? _el.dataset[_key] : undefined;
+        }
+
+        /**
+         * get data from localStorage (with cookie fallback)
+         * @param _key
+         */
+        storageGet(_key) {
+            return window.localStorage.getItem(_key);
+        }
+
+        /**
+         * set data in localStorage (with cookie fallback)
+         * @param _key
+         * @param _data
+         */
+        storageSet(_key, _data){
+            return window.localStorage.setItem(_key, _data);
+        }
+
+        /**
+         * removes a key from localStorage (with cookie fallback)
+         * @param _key
+         */
+        storageRemove(_key) {
+            return window.localStorage.removeItem(_key);
+        }
+
+        /**
+         * clear localStorage (with cookie fallback)
+         */
+        storageClear(){
+            return window.localStorage.clear();
         }
 
 
