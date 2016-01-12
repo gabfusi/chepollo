@@ -51,6 +51,7 @@ Class oo.
 * [~oo](#module_chepollo..oo)
     * [.ready(_callback)](#module_chepollo..oo+ready)
     * [.getAll(_selector)](#module_chepollo..oo+getAll) ⇒ <code>NodeList</code>
+    * [.getOne(_selector)](#module_chepollo..oo+getOne) ⇒ <code>Element</code>
     * [.getById(_id)](#module_chepollo..oo+getById) ⇒ <code>Element</code>
     * [.fadeIn(_el, _duration)](#module_chepollo..oo+fadeIn)
     * [.fadeOut(_el, _duration)](#module_chepollo..oo+fadeOut)
@@ -60,6 +61,10 @@ Class oo.
     * [.toggleClass(_el, _class)](#module_chepollo..oo+toggleClass)
     * [.addData(_el, _key, _data)](#module_chepollo..oo+addData)
     * [.getData(_el, _key)](#module_chepollo..oo+getData) ⇒ <code>string</code> &#124; <code>undefined</code>
+    * [.storageGet(_key)](#module_chepollo..oo+storageGet)
+    * [.storageSet(_key, _data)](#module_chepollo..oo+storageSet)
+    * [.storageRemove(_key)](#module_chepollo..oo+storageRemove)
+    * [.storageClear()](#module_chepollo..oo+storageClear)
     * [.debounce(func, wait, immediate)](#module_chepollo..oo+debounce) ⇒ <code>function</code>
 
 <a name="module_chepollo..oo+ready"></a>
@@ -74,13 +79,23 @@ on DOM ready
 
 <a name="module_chepollo..oo+getAll"></a>
 #### oo.getAll(_selector) ⇒ <code>NodeList</code>
-return an array of DOM nodes using querySelectorAll
+return an array of DOM nodes using querySelectorAll()
 
 **Kind**: instance method of <code>[oo](#module_chepollo..oo)</code>  
 
 | Param | Type |
 | --- | --- |
 | _selector | <code>string</code> | 
+
+<a name="module_chepollo..oo+getOne"></a>
+#### oo.getOne(_selector) ⇒ <code>Element</code>
+return a dom Element using querySelector()
+
+**Kind**: instance method of <code>[oo](#module_chepollo..oo)</code>  
+
+| Param |
+| --- |
+| _selector | 
 
 <a name="module_chepollo..oo+getById"></a>
 #### oo.getById(_id) ⇒ <code>Element</code>
@@ -181,6 +196,42 @@ return the content of the given dataList key
 | _el | 
 | _key | 
 
+<a name="module_chepollo..oo+storageGet"></a>
+#### oo.storageGet(_key)
+get data from localStorage (with cookie fallback)
+
+**Kind**: instance method of <code>[oo](#module_chepollo..oo)</code>  
+
+| Param |
+| --- |
+| _key | 
+
+<a name="module_chepollo..oo+storageSet"></a>
+#### oo.storageSet(_key, _data)
+set data in localStorage (with cookie fallback)
+
+**Kind**: instance method of <code>[oo](#module_chepollo..oo)</code>  
+
+| Param |
+| --- |
+| _key | 
+| _data | 
+
+<a name="module_chepollo..oo+storageRemove"></a>
+#### oo.storageRemove(_key)
+removes a key from localStorage (with cookie fallback)
+
+**Kind**: instance method of <code>[oo](#module_chepollo..oo)</code>  
+
+| Param |
+| --- |
+| _key | 
+
+<a name="module_chepollo..oo+storageClear"></a>
+#### oo.storageClear()
+clear localStorage (with cookie fallback)
+
+**Kind**: instance method of <code>[oo](#module_chepollo..oo)</code>  
 <a name="module_chepollo..oo+debounce"></a>
 #### oo.debounce(func, wait, immediate) ⇒ <code>function</code>
 debounce a function

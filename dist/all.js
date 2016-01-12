@@ -1,10 +1,10 @@
 'use strict';
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
 
 /**
  * @module chepollo
@@ -27,7 +27,7 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
 
     /** Class oo. */
 
-    var oo = (function () {
+    var oo = function () {
         function oo() {
             _classCallCheck(this, oo);
 
@@ -50,7 +50,7 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
             }
 
             /**
-             * return an array of DOM nodes using querySelectorAll
+             * return an array of DOM nodes using querySelectorAll()
              * @param {string} _selector
              * @returns {NodeList}
              */
@@ -59,6 +59,18 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
             key: 'getAll',
             value: function getAll(_selector) {
                 return document.querySelectorAll(_selector);
+            }
+
+            /**
+             * return a dom Element using querySelector()
+             * @param _selector
+             * @returns {Element}
+             */
+
+        }, {
+            key: 'getOne',
+            value: function getOne(_selector) {
+                return document.querySelector(_selector);
             }
 
             /**
@@ -180,6 +192,50 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
                 return typeof _el.dataset[_key] !== 'undefined' ? _el.dataset[_key] : undefined;
             }
 
+            /**
+             * get data from localStorage (with cookie fallback)
+             * @param _key
+             */
+
+        }, {
+            key: 'storageGet',
+            value: function storageGet(_key) {
+                return window.localStorage.getItem(_key);
+            }
+
+            /**
+             * set data in localStorage (with cookie fallback)
+             * @param _key
+             * @param _data
+             */
+
+        }, {
+            key: 'storageSet',
+            value: function storageSet(_key, _data) {
+                return window.localStorage.setItem(_key, _data);
+            }
+
+            /**
+             * removes a key from localStorage (with cookie fallback)
+             * @param _key
+             */
+
+        }, {
+            key: 'storageRemove',
+            value: function storageRemove(_key) {
+                return window.localStorage.removeItem(_key);
+            }
+
+            /**
+             * clear localStorage (with cookie fallback)
+             */
+
+        }, {
+            key: 'storageClear',
+            value: function storageClear() {
+                return window.localStorage.clear();
+            }
+
             //
             // Utilities
             //
@@ -210,7 +266,7 @@ function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.const
         }]);
 
         return oo;
-    })();
+    }();
 
     return new oo();
 });

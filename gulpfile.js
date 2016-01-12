@@ -1,5 +1,3 @@
-'use strict';
-
 const fs = require('fs');
 const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
