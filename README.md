@@ -65,6 +65,8 @@ Class oo.
     * [.storageSet(_key, _data)](#module_chepollo..oo+storageSet)
     * [.storageRemove(_key)](#module_chepollo..oo+storageRemove)
     * [.storageClear()](#module_chepollo..oo+storageClear)
+    * [.cookieSet(cname, cvalue, exdays)](#module_chepollo..oo+cookieSet)
+    * [.cookieGet(cname)](#module_chepollo..oo+cookieGet) ⇒ <code>\*</code>
     * [.debounce(func, wait, immediate)](#module_chepollo..oo+debounce) ⇒ <code>function</code>
 
 <a name="module_chepollo..oo+ready"></a>
@@ -232,6 +234,28 @@ removes a key from localStorage (with cookie fallback)
 clear localStorage (with cookie fallback)
 
 **Kind**: instance method of <code>[oo](#module_chepollo..oo)</code>  
+<a name="module_chepollo..oo+cookieSet"></a>
+#### oo.cookieSet(cname, cvalue, exdays)
+set a cookie
+
+**Kind**: instance method of <code>[oo](#module_chepollo..oo)</code>  
+
+| Param |
+| --- |
+| cname | 
+| cvalue | 
+| exdays | 
+
+<a name="module_chepollo..oo+cookieGet"></a>
+#### oo.cookieGet(cname) ⇒ <code>\*</code>
+get a cookie
+
+**Kind**: instance method of <code>[oo](#module_chepollo..oo)</code>  
+
+| Param |
+| --- |
+| cname | 
+
 <a name="module_chepollo..oo+debounce"></a>
 #### oo.debounce(func, wait, immediate) ⇒ <code>function</code>
 debounce a function
